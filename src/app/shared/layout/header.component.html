@@ -1,0 +1,32 @@
+<div class="header">
+  <div class="input-group">
+    <!-- Logo Text -->
+    <div class="d-inline-block me-5 header-logo fs-2">
+      Social<span class="light opacity-70">Network</span>
+    </div>
+
+    <!-- Search & Find Section -->
+    <input
+      type="search"
+      class="form-control h-full me-3"
+      placeholder="Search"
+    />
+    <!-- <span class="input-group-text border-0 h-full" id="search-addon">
+      <fa-icon [icon]="faSearch" class="fas"></fa-icon>
+    </span> -->
+
+    <div class="box mb-1 me-3">
+      <fa-icon [icon]="faArrowUp" class="fas"></fa-icon>
+      <label class="ms-2">Upload</label>
+    </div>
+
+    <!-- User Section -->
+    <div class="box mb-1">
+      <fa-icon [icon]="faUser" class="fas"></fa-icon>
+    </div>
+    <div class="d-inline-block ms-2">
+      <div class="first-name">{{firstName}}</div>
+      <div class="last-name">{{lastName}}</div>
+    </div>
+  </div>
+</div>

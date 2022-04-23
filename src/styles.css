@@ -1,2 +1,25 @@
 /* Add application styles & imports to this file! */
 @import url('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600&display=swap');
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+* {
+  font-family: Khula;
+}
+
+body {
+  background: rgb(149, 62, 72);
+  padding: 0 4rem;
+}
+
+.light {
+  font-weight: lighter;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.bolder {
+  font-weight: bolder;
+}
+
