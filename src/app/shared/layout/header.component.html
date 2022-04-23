@@ -8,25 +8,25 @@
     <!-- Search & Find Section -->
     <input
       type="search"
-      class="form-control h-full me-3"
+      class="form-control mb-2 border-0"
       placeholder="Search"
     />
-    <!-- <span class="input-group-text border-0 h-full" id="search-addon">
-      <fa-icon [icon]="faSearch" class="fas"></fa-icon>
-    </span> -->
+    <span class="input-group-text border-0 mb-2 me-3 search-btn">
+      <fa-icon [icon]="faSearch" class="fas" id="search-addon"></fa-icon>
+    </span>
 
-    <div class="box mb-1 me-3">
+    <div class="box mb-2 me-3">
       <fa-icon [icon]="faArrowUp" class="fas"></fa-icon>
       <label class="ms-2">Upload</label>
     </div>
 
     <!-- User Section -->
-    <div class="box mb-1">
+    <div class="box mb-2">
       <fa-icon [icon]="faUser" class="fas"></fa-icon>
     </div>
     <div class="d-inline-block ms-2">
-      <div class="first-name">{{firstName}}</div>
-      <div class="last-name">{{lastName}}</div>
+      <div class="first-name">{{ firstName }}</div>
+      <div class="last-name">{{ lastName }}</div>
     </div>
   </div>
 </div>

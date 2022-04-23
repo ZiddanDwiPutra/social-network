@@ -6,9 +6,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { HeaderComponent } from './shared';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, FontAwesomeModule],
+  imports: [BrowserModule, FormsModule, FontAwesomeModule, DashboardModule],
   declarations: [AppComponent, HelloComponent, HeaderComponent],
   bootstrap: [AppComponent],
 })
