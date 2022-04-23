@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600&display=swap');
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
-:root{
+:root {
   --bg-color: rgb(149, 62, 72);
 }
 
@@ -27,3 +27,7 @@ body {
   font-weight: bolder;
 }
 
+img,
+svg {
+  vertical-align: text-top;
+}

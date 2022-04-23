@@ -5,7 +5,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import { HeaderComponent } from './shared';
+import { HeaderComponent} from './shared';
 import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
