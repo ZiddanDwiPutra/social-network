@@ -1,0 +1,41 @@
+<div class="grid-list-comp">
+  <div class="head position-relative" style="top: 10px">
+    <div class="fs-4 d-inline-block">{{ headerLabel }}</div>
+    <a
+      href="javascript:void(0)"
+      class="position-absolute"
+      style="right:0;top:5px"
+      >{{ viewAllLabel }}</a
+    >
+  </div>
+  <div class="body">
+    <div
+      class="item position-relative"
+      *ngFor="let item of itemFiltered; index as i"
+      (mouseover)="onMouseOver(item)"
+      (mouseleave)="onMouseLeave(item)"
+    >
+      <span
+        *ngIf="item.hovered"
+        class="d-inline-block position-absolute close-icon"
+        (click)="remove(i)"
+      >
+        <fa-icon class="fas" [icon]="faTimes"></fa-icon>
+      </span>
+      <img [src]="item.thumbnail" />
+      <div class="ms-2 d-inline-block">
+        <div class="mb-1">
+          <span class="title bold">{{ item.title }}</span>
+          <span class="ms-2 light subTitle">{{ item.subTitle2 }}</span>
+        </div>
+        <div class="mb-1 light subTitle">
+          {{ item.subTitle }}
+        </div>
+        <div>
+          <fa-icon class="fas" [icon]="item.icon"></fa-icon>
+          <span class="light subTitle ms-2">{{ item.iconLabel }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+.box {
+  border: 1px solid white;
+  height: 100%;
+  width: 100%;
+}
+.grid-comp table {
+  border-collapse: separate;
+  border-spacing: 0.5rem;
+}
+.grid-comp tr td {
+  border: 1px solid white;
+  /* min-width: 280px; */
+  height: 180px;
+  border-radius: 5px;
+  vertical-align: text-top;
+}
+.td-content {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: 300ms border;
+}
+.td-content img {
+  width: 100%;
+  height: 100%;
+}
+a {
+  color: white;
+}
+.row {
+  position: relative;
+  top: 10px;
+  align-items: center;
+}

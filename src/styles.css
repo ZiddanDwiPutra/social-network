@@ -15,6 +15,10 @@ body {
   padding: 0 4rem;
 }
 
+table{
+  width: 100%;
+}
+
 .light {
   font-weight: lighter;
 }
