@@ -3,7 +3,10 @@
     <grid
       class="col-md-8 col-sm-12 col"
       headerLabel="Video"
-      viewAllLabel="Browse All Videos"
+      viewAllLabel="Browse all Videos"
+      action="Upload"
+      actionDetail="Your Own Videos"
+      [items]="videoList"
     ></grid>
     <grid-list
       headerLabel="Activity"
@@ -11,5 +14,36 @@
       [items]="activityList"
       class="col-md-4 col-sm-12 col"
     ></grid-list>
+
+    <div class="col-md-8 col-sm-12 col mt-3">
+      <div class="row">
+        <grid
+          class="col-md-12"
+          headerLabel="People"
+          viewAllLabel="View all"
+          [iconAction]="faDots"
+          action="Show"
+          actionDetail="Your Works"
+          [items]="peopleList"
+        ></grid>
+        <grid
+          class="col-md-12"
+          headerLabel="Documents"
+          viewAllLabel="Browse all Documents"
+          action="Share"
+          actionDetail="Your Documents"
+          [items]="documentList"
+        ></grid>
+      </div>
+    </div>
+    <div class="col-md-4 col col-sm-12 mt-3">
+      <grid
+        class="col-md-8 col-sm-12 col"
+        headerLabel="Channels"
+        viewAllLabel="Browse al Channels"
+        type="2-cols"
+        [items]="channelList"
+      ></grid>
+    </div>
   </div>
 </div>

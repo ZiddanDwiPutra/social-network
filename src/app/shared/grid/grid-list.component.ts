@@ -18,23 +18,24 @@ export class GridListComponent {
 
   ngOnChanges(change: SimpleChanges) {
     if (change.items.previousValue != change.items.currentValue) {
-      this._filterItem();
+      this._filterItems();
     }
   }
 
-  _filterItem() {
-    for (let item of this.items.slice(0, 6)) {
-      this.itemFiltered.push(item);
-    }
-    console.log(this.itemFiltered);
-  }
   onMouseOver(gridItem: GridItem) {
     gridItem.hovered = true;
   }
   onMouseLeave(gridItem: GridItem) {
     gridItem.hovered = false;
   }
-  remove(idx: number){
+  remove(idx: number) {
     this.itemFiltered.splice(idx, 1);
+  }
+
+  _filterItems() {
+    for (let item of this.items.slice(0, 6)) {
+      this.itemFiltered.push(item);
+    }
+    console.log(this.itemFiltered);
   }
 }

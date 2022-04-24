@@ -3,32 +3,118 @@
   height: 100%;
   width: 100%;
 }
+.grid-comp.cols-3 {
+  margin-left: -5px;
+}
 .grid-comp table {
   border-collapse: separate;
-  border-spacing: 0.5rem;
+  border-spacing: 1rem;
+  margin-left: -10px;
 }
 .grid-comp tr td {
-  border: 1px solid white;
   /* min-width: 280px; */
   height: 180px;
   border-radius: 5px;
   vertical-align: text-top;
 }
+.grid-comp tr td:hover {
+  outline: 1px solid white;
+}
+
+.grid-comp .body {
+  border-top: 2px solid white;
+  border-bottom: 1px solid white;
+  margin-top: 8px;
+  padding-top: 10px;
+  min-height: 750px;
+}
+.grid-comp .body .item {
+  border: 1px solid white;
+  min-height: 120px;
+  border-radius: 5px;
+}
+.grid-comp .body .item:hover {
+  outline: 1px solid white;
+}
+
 .td-content {
   width: 100%;
   height: 100%;
   cursor: pointer;
   transition: 300ms border;
 }
-.td-content img {
+.td-content * {
+  text-shadow: 1px 1px grey;
+}
+.td-content .title {
+  bottom: 20px;
+  left: 5px;
+}
+.td-content .subTitle {
+  bottom: 0px;
+  left: 5px;
+}
+.td-content .subTitle2 {
+  bottom: 0px;
+  right: 5px;
+}
+
+.td-content img,
+.body .item img {
   width: 100%;
   height: 100%;
 }
+.body .item img:hover {
+  opacity: 0.5;
+}
+.body .item .title {
+  bottom: 0px;
+  left: 5px;
+  text-shadow: 1px 1px black;
+}
+.td-content img:hover {
+  opacity: 0.5;
+}
 a {
   color: white;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 .row {
   position: relative;
   top: 10px;
   align-items: center;
+}
+.body.row {
+  align-items: flex-start;
+}
+
+.td-action {
+  border: 1px solid white;
+}
+.td-action-content {
+  position: absolute;
+  padding-top: 23%;
+  padding-left: 10%;
+  width: 85%;
+}
+
+.action-icon {
+  font-size: 40pt;
+  float: left;
+}
+
+.close-icon {
+  top: 0px;
+  right: 0px;
+  background: white;
+  color: black;
+  padding: 0px 10px;
+  border-radius: 0px 0px 0px 100%;
+}
+
+img {
+  border-radius: 5px;
 }

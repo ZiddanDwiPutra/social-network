@@ -1,7 +1,8 @@
 import videos from './json/videos.json';
-export class VideoService {
-  constructor() {}
-  getAllData() {
-    return videos;
+import { MainService } from './main.service';
+
+export class VideoService extends MainService {
+  getAllData(onSuccess: Function) {
+    return this.getData(videos, onSuccess);
   }
 }

@@ -1,4 +1,4 @@
-<div class="grid-comp">
+<div class="grid-comp cols-3" *ngIf="type == '3-cols'">
   <div class="ms-2">
     <div class="row">
       <div class="col-md-6">
@@ -11,28 +11,122 @@
   </div>
   <table>
     <tr>
-      <td colspan="2" rowspan="2">
-        <div class="td-content"><img [src]="thumbnails[0]" alt="thumbnails" /></div>
+      <td colspan="2" rowspan="2" class="position-relative">
+        <div class="td-content">
+          <img [src]="itemFiltered[0]?.thumbnail" alt="thumbnails" />
+          <div class="title fs-3 bold position-absolute">
+            {{ itemFiltered[0]?.title }}
+          </div>
+          <div class="subTitle bold position-absolute">
+            {{ itemFiltered[0]?.subTitle }}
+          </div>
+          <div class="subTitle2 bold position-absolute">
+            {{ itemFiltered[0]?.subTitle2 }}
+          </div>
+        </div>
       </td>
-      <td>
-        <div class="td-content"><img [src]="thumbnails[0]" alt="thumbnails" /></div>
+      <td class="position-relative">
+        <div class="td-content">
+          <img [src]="itemFiltered[1]?.thumbnail" alt="thumbnails" />
+          <div class="title bold position-absolute">
+            {{ itemFiltered[1]?.title }}
+          </div>
+          <div class="subTitle bold position-absolute">
+            {{ itemFiltered[1]?.subTitle }}
+          </div>
+          <div class="subTitle2 bold position-absolute">
+            {{ itemFiltered[1]?.subTitle2 }}
+          </div>
+        </div>
       </td>
     </tr>
     <tr>
-      <td>
-        <div class="td-content"><img [src]="thumbnails[0]" alt="thumbnails" /></div>
+      <td class="position-relative">
+        <div class="td-content">
+          <img [src]="itemFiltered[2]?.thumbnail" alt="thumbnails" />
+          <div class="title bold position-absolute">
+            {{ itemFiltered[2]?.title }}
+          </div>
+          <div class="subTitle bold position-absolute">
+            {{ itemFiltered[2]?.subTitle }}
+          </div>
+          <div class="subTitle2 bold position-absolute">
+            {{ itemFiltered[2]?.subTitle2 }}
+          </div>
+        </div>
       </td>
     </tr>
     <tr>
-      <td>
-        <div class="td-content"><img [src]="thumbnails[0]" alt="thumbnails" /></div>
+      <td class="position-relative">
+        <div class="td-content">
+          <img [src]="itemFiltered[3]?.thumbnail" alt="thumbnails" />
+          <div class="title bold position-absolute">
+            {{ itemFiltered[3]?.title }}
+          </div>
+          <div class="subTitle bold position-absolute">
+            {{ itemFiltered[3]?.subTitle }}
+          </div>
+          <div class="subTitle2 bold position-absolute">
+            {{ itemFiltered[3]?.subTitle2 }}
+          </div>
+        </div>
       </td>
-      <td>
-        <div class="td-content"><img [src]="thumbnails[0]" alt="thumbnails" /></div>
+      <td class="position-relative">
+        <div class="td-content">
+          <img [src]="itemFiltered[4]?.thumbnail" alt="thumbnails" />
+          <div class="title bold position-absolute">
+            {{ itemFiltered[4]?.title }}
+          </div>
+          <div class="subTitle bold position-absolute">
+            {{ itemFiltered[4]?.subTitle }}
+          </div>
+          <div class="subTitle2 bold position-absolute">
+            {{ itemFiltered[4]?.subTitle2 }}
+          </div>
+        </div>
       </td>
-      <td>
-        <div class="td-content"><img [src]="thumbnails[0]" alt="thumbnails" /></div>
+      <td class="position-relative td-action">
+        <div class="td-action-content pointer">
+          <fa-icon [icon]="iconAction" class="fas action-icon"></fa-icon>
+          <div class="action-label ms-2 d-inline-block mt-2">
+            <div class="bold">{{ action }}</div>
+            <div class="light">{{ actionDetail }}</div>
+          </div>
+        </div>
       </td>
     </tr>
   </table>
+</div>
+
+<div class="grid-comp cols-2" *ngIf="type == '2-cols'">
+  <div class="head position-relative" style="top: 10px">
+    <div class="fs-4 d-inline-block">{{ headerLabel }}</div>
+    <a
+      href="javascript:void(0)"
+      class="position-absolute"
+      style="right:0;top:5px"
+      >{{ viewAllLabel }}</a
+    >
+  </div>
+  <div class="body">
+    <div class="row">
+      <div
+        class="col-md-6 mb-3 pointer"
+        *ngFor="let item of itemFiltered; index as i"
+        (mouseover)="onMouseOver(item)"
+        (mouseleave)="onMouseLeave(item)"
+      >
+        <div class="item position-relative">
+          <span
+            *ngIf="item.hovered"
+            class="d-inline-block position-absolute close-icon"
+          >
+            <fa-icon class="fas" [icon]="faTimes" (click)="remove(i)"></fa-icon>
+          </span>
+          <img [src]="item.thumbnail" alt="thumbnails" />
+          <div class="position-absolute title">{{ item.title }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

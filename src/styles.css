@@ -35,3 +35,7 @@ img,
 svg {
   vertical-align: text-top;
 }
+
+.pointer , .pointer *{
+  cursor: pointer;
+}
