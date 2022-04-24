@@ -46,7 +46,7 @@
   text-decoration: none;
 }
 .nav .separator {
-  margin: 0 0.5rem;
+  margin: 0 1rem;
 }
 .nav a:hover {
   text-decoration: underline;
